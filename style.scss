@@ -1,0 +1,91 @@
+@import url("myCssReset.css");
+
+.wrap{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: rgb(135, 183, 183);
+    padding: 0 10px;
+
+    h1 a{
+
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/School-PNG-Photo.png");
+        background-size: contain;
+        text-indent: 101%;
+        overflow:hidden;
+        white-space:nowrap;
+    }
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+ 
+    li{
+        background-color: teal;
+        padding: 5px 10px;
+    
+        a{  
+            display: block;
+            text-decoration: none;
+            color: white;
+          
+        }
+        
+    }
+    li:hover{
+        background-color: rgb(6, 179, 179);
+    }
+}
+
+// 在PC上隱藏漢堡選單功能
+.showmenu{
+    background-image: url("https://upload.cc/i1/2022/07/31/WNHrR5.png");
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+}
+
+
+@media(max-width:767px){
+
+    .menu{
+         /*隱藏選單*/
+        max-height: 0px;
+        overflow: hidden;
+            /*定位選單*/
+        position: absolute;
+        z-index: 100;
+         /*header高度*/
+        top: 76px;
+        
+        left: 0;
+        right: 0;
+        transition: max-height 1.5s;
+        flex-wrap: wrap;
+        
+        
+        li{
+            width: 100%;
+        }
+
+    }
+    .showmenu{
+        display: block;
+    }
+
+    .menu-show .menu{
+        max-height: 600px;
+    }
+}

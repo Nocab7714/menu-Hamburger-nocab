@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import url("myCssReset.css");
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #87b7b7;
+  padding: 0 10px;
+}
+
+.header h1 a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/School-PNG-Photo.png");
+  background-size: contain;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  background-color: teal;
+  padding: 5px 10px;
+}
+
+.menu li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.menu li:hover {
+  background-color: #06b3b3;
+}
+
+.showmenu {
+  background-image: url("https://upload.cc/i1/2022/07/31/WNHrR5.png");
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    /*隱藏選單*/
+    max-height: 0px;
+    overflow: hidden;
+    /*定位選單*/
+    position: absolute;
+    z-index: 100;
+    /*header高度*/
+    top: 76px;
+    left: 0;
+    right: 0;
+    -webkit-transition: max-height 1.5s;
+    transition: max-height 1.5s;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu li {
+    width: 100%;
+  }
+  .showmenu {
+    display: block;
+  }
+  .menu-show .menu {
+    max-height: 600px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
